@@ -1,0 +1,6 @@
+framework module QExtensions {
+  umbrella header "QExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
