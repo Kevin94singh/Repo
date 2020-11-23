@@ -37,7 +37,8 @@ final class CountryViewController: BaseViewController<CountryViewModel> {
         super.viewDidLoad()
         refreshControl.tintColor = .black
         bind()
-        viewModel.countryAction.execute()
+        /// codes for testing only
+        viewModel.countryAction.execute("sk")
     }
     
     override func bind() {
@@ -48,7 +49,13 @@ final class CountryViewController: BaseViewController<CountryViewModel> {
     // MARK:- SET STYLE
     override func setStyle() {
         super.setStyle()
-        setDefaultAttributesFor(style: .repoApp, for: self, title: Localizable.countryTitle())
+        setDefaultAttributesFor(style: .repoApp, for: self, title: Localizable.countryNavigationTitle())
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localizable.countryNavigationButtonUpdate(), style: .plain, target: self, action: #selector(searchIndiaTapped))
+    }
+    
+    @objc private func searchIndiaTapped() {
+        /// Czech
+        viewModel.countryAction.execute("cz")
     }
 }
 
@@ -112,8 +119,10 @@ extension CountryViewController {
             .rx
             .controlEvent(.valueChanged)
             .asDriver()
-            .drive(viewModel.countryAction.inputs)
-            .disposed(by: disposeBag)
+            .drive(onNext: { [weak self] () in
+                /// India
+                self?.viewModel.countryAction.execute("in")
+            }).disposed(by: disposeBag)
         
         viewModel
             .error

@@ -33,7 +33,6 @@
 		0A20B38D256C47E100F33E94 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20B38C256C47E100F33E94 /* ViewStyle.swift */; };
 		0A20B390256C491900F33E94 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20B38F256C491900F33E94 /* ErrorViewController.swift */; };
 		0A20B39E256C505500F33E94 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20B39D256C505500F33E94 /* Currencies.swift */; };
-		0A20B3A1256C506800F33E94 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20B3A0256C506800F33E94 /* Languages.swift */; };
 		0AAEA0232561E7E400416674 /* AppStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAEA0222561E7E400416674 /* AppStyle+.swift */; };
 		0AF55AA825630231004F4041 /* CountryApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF55AA725630231004F4041 /* CountryApiRouter.swift */; };
 		0AF55AB425630360004F4041 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF55AB325630360004F4041 /* Configuration.swift */; };
@@ -69,7 +68,6 @@
 		0A20B38C256C47E100F33E94 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		0A20B38F256C491900F33E94 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		0A20B39D256C505500F33E94 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
-		0A20B3A0256C506800F33E94 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		0AAEA0222561E7E400416674 /* AppStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+.swift"; sourceTree = "<group>"; };
 		0AF55AA725630231004F4041 /* CountryApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryApiRouter.swift; sourceTree = "<group>"; };
 		0AF55AB325630360004F4041 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 			children = (
 				0A20B28A256AEF9B00F33E94 /* Country.swift */,
 				0A20B39D256C505500F33E94 /* Currencies.swift */,
-				0A20B3A0256C506800F33E94 /* Languages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,7 +433,6 @@
 				0A20B280256AE9D000F33E94 /* NetworkManager.swift in Sources */,
 				0A06D8952561D7C000AF0222 /* AppDelegate.swift in Sources */,
 				0A06D8D02561E0F900AF0222 /* CountryViewModel.swift in Sources */,
-				0A20B3A1256C506800F33E94 /* Languages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

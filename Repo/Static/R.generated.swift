@@ -105,7 +105,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
     struct localizable {
       /// Value: Capital
       static let countryCapital = Rswift.StringResource(key: "country.capital", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -139,6 +139,8 @@ struct R: Rswift.Validatable {
       static let currenciesSymbol = Rswift.StringResource(key: "currencies.symbol", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Unknown error
       static let errorUnknown = Rswift.StringResource(key: "error.unknown", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Update
+      static let countryNavigationButtonUpdate = Rswift.StringResource(key: "country.navigation.button.update", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
       /// Value: Capital
       static func countryCapital(preferredLanguages: [String]? = nil) -> String {
@@ -346,6 +348,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("error.unknown", bundle: bundle, comment: "")
+      }
+
+      /// Value: Update
+      static func countryNavigationButtonUpdate(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("country.navigation.button.update", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "country.navigation.button.update"
+        }
+
+        return NSLocalizedString("country.navigation.button.update", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

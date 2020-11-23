@@ -11,7 +11,6 @@ struct CountryItem: Codable {
     var region: String
     var subregion: String
     var currencies: [Currencies]
-    var languages: [Languages]
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -19,6 +18,5 @@ struct CountryItem: Codable {
         case region = "region"
         case subregion = "subregion"
         case currencies = "currencies"
-        case languages = "languages"
     }
 }

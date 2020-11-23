@@ -11,7 +11,7 @@ import RxSwift
 import Action
 
 protocol CountryViewModelInputs {
-    var countryAction: Action<Void, CountryItem> { get set }
+    var countryAction: Action<String, CountryItem> { get set }
 }
 
 protocol CountryViewModelOutputs {
@@ -42,9 +42,9 @@ final class CountryViewModel: BaseViewModel, CountryViewModelInputs, CountryView
     
     // MARK: - Inputs
     
-    lazy var countryAction: Action<Void, CountryItem> = {
-        return Action(workFactory: { [unowned self]() -> Single<CountryItem> in
-            return self.dependencies.countryApi.getCountry()
+    lazy var countryAction: Action<String, CountryItem> = {
+        return Action(workFactory: { [unowned self] (code) -> Single<CountryItem> in
+            return self.dependencies.countryApi.getCountry(code: code)
         })
     }()
     

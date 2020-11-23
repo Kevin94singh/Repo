@@ -9,6 +9,7 @@
 "country.navigation.title" = "Countries";
 "country.general.title" = "General";
 "country.currencies.title" = "Currencies";
+"country.navigation.button.update" = "Update";
 "country.title" = "Country";
 "country.capital" = "Capital";
 "country.region" = "Region";

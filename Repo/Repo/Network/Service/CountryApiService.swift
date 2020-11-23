@@ -12,7 +12,7 @@ protocol HasCountryApi {
 }
 
 protocol CountryApiServicing {
-    func getCountry() -> Single<CountryItem>
+    func getCountry(code: String) -> Single<CountryItem>
 }
 
 final class CountryApiService {
@@ -27,7 +27,7 @@ final class CountryApiService {
 
 extension CountryApiService: CountryApiServicing {
     
-    func getCountry() -> Single<CountryItem> {
-        return dependencies.networkManager.makeRequest(router: CountryApiRouter.getCountry)
+    func getCountry(code: String) -> Single<CountryItem> {
+        return dependencies.networkManager.makeRequest(router: CountryApiRouter.getCountry(code: code))
     }
 }

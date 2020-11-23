@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum CountryApiRouter {
-    case getCountry
+    case getCountry(code: String)
 }
 
 extension CountryApiRouter: URLRequestConvertible {
@@ -54,8 +54,8 @@ extension CountryApiRouter: URLRequestConvertible {
     
     var path: String {
         switch self {
-        case .getCountry:
-            return "/rest/v2/alpha/us"
+        case .getCountry(let country):
+            return "/rest/v2/alpha/\(country)"
         }
     }
     
