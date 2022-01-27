@@ -11,11 +11,11 @@ import RxSwift
 import Action
 
 protocol CountryViewModelInputs {
-    var countryAction: Action<String, CountryItem> { get set }
+    var countryAction: Action<String, [CountryItem]> { get set }
 }
 
 protocol CountryViewModelOutputs {
-    var country: BehaviorRelay<CountryItem?> { get }
+    var country: BehaviorRelay<[CountryItem]> { get }
     var error: BehaviorRelay<Error?> { get }
     var isExecuting: BehaviorRelay<Bool> { get }
 }
@@ -42,15 +42,15 @@ final class CountryViewModel: BaseViewModel, CountryViewModelInputs, CountryView
     
     // MARK: - Inputs
     
-    lazy var countryAction: Action<String, CountryItem> = {
-        return Action(workFactory: { [unowned self] (code) -> Single<CountryItem> in
+    lazy var countryAction: Action<String, [CountryItem]> = {
+        return Action(workFactory: { [unowned self] (code) -> Single<[CountryItem]> in
             return self.dependencies.countryApi.getCountry(code: code)
         })
     }()
     
     // MARK: - Inputs
     
-    internal let country = BehaviorRelay<CountryItem?>(value: nil)
+    internal let country = BehaviorRelay<[CountryItem]>(value: [])
     internal let error = BehaviorRelay<Error?>(value: nil)
     internal let isExecuting = BehaviorRelay<Bool>(value: false)
 }

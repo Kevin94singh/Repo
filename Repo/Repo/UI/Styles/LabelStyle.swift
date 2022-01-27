@@ -8,7 +8,6 @@
 import UIKit
 
 struct LabelStyle {
-    
     static func regular12LeftBlack80(label: UILabel) {
         label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textColor = .black80

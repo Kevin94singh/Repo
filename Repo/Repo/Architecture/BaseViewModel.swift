@@ -1,16 +1,9 @@
-//
-//  BaseViewModel.swift
-//  Repo
-//
-//  Created by Kevin Singh on 22.11.2020.
-//
-
 import RxSwift
 
 /// View model base class
-class BaseViewModel: BindableProtocol {
+class BaseViewModel: ViewModelProtocol {
     
-    // MARK: - Properties
+    // MARK: Properties
     
     private(set) var disposeBag: DisposeBag = DisposeBag()
     

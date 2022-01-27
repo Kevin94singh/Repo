@@ -5,8 +5,6 @@
 //  Created by Kevin Singh on 22.11.2020.
 //
 
-import QExtensions
-
 typealias HasNetworkManagerDependencies = HasNetworkManager
 typealias HasCountryApiDependencies = HasCountryApi
 
@@ -25,6 +23,5 @@ let dependencies = AppDependency()
 
 // MARK: - Aliases
 
-typealias Q = QBase
 typealias Localizable = R.string.localizable
 typealias Images = R.image

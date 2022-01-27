@@ -16,9 +16,6 @@ def common_pods
 
 	# Network
 	pod 'Alamofire', '~> 4.9.1'
-
-	# QBase
-	pod 'QExtensions', '~> 0.0.21'
 end
 
 target 'Repo' do

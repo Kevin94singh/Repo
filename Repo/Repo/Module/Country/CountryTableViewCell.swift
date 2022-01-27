@@ -42,7 +42,6 @@ final class CountryTableViewCell: UITableViewCell {
     }
     
     private func setUI() {
-        
         let bgView = UIView()
         bgView.style(ViewStyle.roundedWithShadow)
         
@@ -91,8 +90,10 @@ final class CountryTableViewCell: UITableViewCell {
     }
     
     func set(country: CountryItem) {
-        countryValueLabel.text(country.name)
-        capitalValueLabel.text(country.capital)
+        countryValueLabel.text(country.name.common)
+        if let capital = country.capital.first {
+            capitalValueLabel.text(capital)
+        }
         regionValueLabel.text(country.region)
         subregionValueLabel.text(country.subregion)
     }

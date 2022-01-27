@@ -6,19 +6,15 @@
 //
 
 import Foundation
-import QExtensions
 
-extension QBase {
-    
-    enum CustomError: Error {
-        case noNetwork
-        case dataNotFound
-        case unknown
-        case error(String)
-    }
+enum CustomError: Error {
+    case noNetwork
+    case dataNotFound
+    case unknown
+    case error(String)
 }
 
-extension QBase.CustomError: LocalizedError {
+extension CustomError: LocalizedError {
     
     public var errorDescription: String? {
         switch self {
@@ -33,4 +29,3 @@ extension QBase.CustomError: LocalizedError {
         }
     }
 }
-
