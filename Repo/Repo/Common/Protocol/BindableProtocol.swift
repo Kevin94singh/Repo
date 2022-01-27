@@ -8,7 +8,7 @@
 import RxSwift
 
 /// Bindable protocol
-public protocol BindableProtocol: class {
+public protocol BindableProtocol: AnyObject {
     
     // MARK: - Properties
     

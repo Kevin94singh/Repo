@@ -6,11 +6,11 @@
 //
 
 struct CountryItem: Codable {
-    var name: String
-    var capital: String
+    var name: Name
+    var capital: [String]
     var region: String
     var subregion: String
-    var currencies: [Currencies]
+    var currencies: [String: Currencies]
     
     enum CodingKeys: String, CodingKey {
         case name = "name"

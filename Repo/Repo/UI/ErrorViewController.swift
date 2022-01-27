@@ -8,14 +8,14 @@
 import UIKit
 import Stevia
 
-final class ErrorViewController: BaseViewController<Q.NoViewModel> {
+final class ErrorViewController: BaseViewController<NoViewModel> {
     
     // MARK: - Variables
     
     var dismissTapped: (() -> Void)?
     
-    private lazy var dismissButton: Q.AnimatedButton = {
-        let dismissButton = Q.AnimatedButton()
+    private lazy var dismissButton: AnimatedButton = {
+        let dismissButton = AnimatedButton()
         dismissButton.setTitle(Localizable.errorSampleButton(), for: .normal)
         dismissButton.backgroundColor = .red
         dismissButton.tintColor = .blue
@@ -59,8 +59,8 @@ final class ErrorViewController: BaseViewController<Q.NoViewModel> {
         backgroundView.width(90%)
         
         backgroundView.layout(
-            40,
-            |-40-imageView.centerHorizontally()-40-|,
+            20,
+            |-40-imageView.height(80).centerHorizontally()-40-|,
             17,
             |-35-titleLabel-35-|,
             10,
@@ -79,7 +79,6 @@ final class ErrorViewController: BaseViewController<Q.NoViewModel> {
 }
 
 extension ErrorViewController {
-    
     func bindAction() {
         dismissButton.rx.tap
             .asDriver()

@@ -55,7 +55,7 @@ extension CountryApiRouter: URLRequestConvertible {
     var path: String {
         switch self {
         case .getCountry(let country):
-            return "/rest/v2/alpha/\(country)"
+            return "/v3.1/alpha/\(country)"
         }
     }
     
@@ -74,7 +74,7 @@ extension CountryApiRouter: URLRequestConvertible {
         if let query = query, !query.isEmpty {
             url?.queryItems = query
         }
-        var request = URLRequest(url: (url?.url)!)
+        var request = URLRequest(url: (url?.url)!) //force-unwrap
 
         request.httpMethod = method.rawValue
         request.timeoutInterval = 15 * 1_000

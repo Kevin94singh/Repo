@@ -3,7 +3,6 @@ PODS:
     - RxCocoa (< 7.0, >= 5.0)
     - RxSwift (< 7.0, >= 5.0)
   - Alamofire (4.9.1)
-  - QExtensions (0.0.21)
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
@@ -18,7 +17,6 @@ PODS:
 DEPENDENCIES:
   - Action (~> 4.0)
   - Alamofire (~> 4.9.1)
-  - QExtensions (~> 0.0.21)
   - R.swift (~> 5.3.0)
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
@@ -28,7 +26,6 @@ SPEC REPOS:
   trunk:
     - Action
     - Alamofire
-    - QExtensions
     - R.swift
     - R.swift.Library
     - RxCocoa
@@ -39,7 +36,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Action: 5dc2194f7a0b77857c82a677b0da655f197c005f
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  QExtensions: 4b40eefb6cabae6384c37bf89688073b9f03fd45
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -47,6 +43,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
 
-PODFILE CHECKSUM: 73ba8966f804320601da2cb98fc8bb04743f70ea
+PODFILE CHECKSUM: e450666d076a5f667e7fd6433ca663494bbc298c
 
 COCOAPODS: 1.10.0

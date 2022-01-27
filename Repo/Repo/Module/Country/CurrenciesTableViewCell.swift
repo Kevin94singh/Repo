@@ -14,12 +14,7 @@ final class CurrenciesTableViewCell: UITableViewCell {
         let label = UILabel().style(LabelStyle.regular12Right)
         return label
     }()
-    
-    private lazy var codeValueLabel: UILabel = {
-        let label = UILabel().style(LabelStyle.regular12Right)
-        return label
-    }()
-    
+
     private lazy var symbolValueLabel: UILabel = {
         let label = UILabel().style(LabelStyle.regular12Right)
         return label
@@ -37,12 +32,8 @@ final class CurrenciesTableViewCell: UITableViewCell {
     }
     
     private func setUI() {
-        
         let nameLabel = UILabel()
         nameLabel.text(Localizable.currenciesName()).style(LabelStyle.regular12LeftBlack80)
-        
-        let codeLabel = UILabel()
-        codeLabel.text(Localizable.currenciesCode()).style(LabelStyle.regular12LeftBlack80)
         
         let symbolLabel = UILabel()
         symbolLabel.text(Localizable.currenciesSymbol()).style(LabelStyle.regular12LeftBlack80)
@@ -54,8 +45,6 @@ final class CurrenciesTableViewCell: UITableViewCell {
             bgView.sv(
                 nameLabel,
                 nameValueLabel,
-                codeLabel,
-                codeValueLabel,
                 symbolLabel,
                 symbolValueLabel
             )
@@ -71,8 +60,6 @@ final class CurrenciesTableViewCell: UITableViewCell {
             10,
             |-20-nameLabel-(>=20)-nameValueLabel-20-|,
             10,
-            |-20-codeLabel-(>=20)-codeValueLabel-20-|,
-            10,
             |-20-symbolLabel-(>=20)-symbolValueLabel-20-|,
             10
         )
@@ -80,7 +67,6 @@ final class CurrenciesTableViewCell: UITableViewCell {
     
     func set(data: Currencies) {
         nameValueLabel.text(data.name)
-        codeValueLabel.text(data.code)
         symbolValueLabel.text(data.symbol)
     }
 }

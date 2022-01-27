@@ -22,7 +22,6 @@ protocol NetworkableManager {
 }
 
 final class NetworkManager {
-    
     public typealias Dependencies = HasNetworkManager
     
     // MARK: - DisposeBag
@@ -57,7 +56,6 @@ final class NetworkManager {
 }
 
 extension NetworkManager: NetworkableManager {
-    
     func makeRequest<T: Codable>(router: URLRequestConvertible) -> PrimitiveSequence<SingleTrait, T> {
         return Single.create { (single) -> Disposable in
             let request = self.manager.request(router)
@@ -68,7 +66,7 @@ extension NetworkManager: NetworkableManager {
                         single(.error(self.handle(error: error)))
                     case .success:
                         guard let data = response.data else {
-                            single(.error(Q.CustomError.dataNotFound))
+                            single(.error(CustomError.dataNotFound))
                             return
                         }
                         
@@ -102,7 +100,7 @@ extension NetworkManager: NetworkableManager {
                 }
                 
                 guard let statusCode = response.response?.statusCode else {
-                    single(.error(Q.CustomError.unknown))
+                    single(.error(CustomError.unknown))
                     return
                 }
                 
@@ -110,7 +108,7 @@ extension NetworkManager: NetworkableManager {
                 case expectedCodeRange:
                     single(.success(true))
                 default:
-                    single(.error(Q.CustomError.unknown))
+                    single(.error(CustomError.unknown))
                 }
             })
             
@@ -122,8 +120,7 @@ extension NetworkManager: NetworkableManager {
 }
 
 extension NetworkManagerHelper {
-    private func handle(error: Error) -> Q.CustomError {
-        
+    private func handle(error: Error) -> CustomError {
         if let urlError = error as? URLError, urlError.code == .notConnectedToInternet {
             return .noNetwork
         } else {

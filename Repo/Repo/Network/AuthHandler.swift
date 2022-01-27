@@ -25,7 +25,6 @@ extension AuthHandler: RequestAdapter {
 }
 
 extension AuthHandler: RequestRetrier {
-    
     func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
         lock.lock() ; defer { lock.unlock() }
         

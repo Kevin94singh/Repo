@@ -8,7 +8,6 @@
 import UIKit
 
 struct ViewStyle {
-    
     static func roundedWithShadow(view: UIView) {
         view.backgroundColor = .white
         view.layer.masksToBounds = false

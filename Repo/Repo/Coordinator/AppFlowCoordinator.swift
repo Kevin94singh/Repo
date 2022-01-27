@@ -8,12 +8,11 @@
 import UIKit
 import RxSwift
 
-protocol AppFlowDelegate: class {
+protocol AppFlowDelegate: AnyObject {
     func showDefaultFlow()
 }
 
-final class AppFlowCoordinator: Q.FlowCoordinator<Q.NoDeepLink> {
-    
+final class AppFlowCoordinator: BaseCoordinator<NoDeepLink> {
     private var window: UIWindow!
     
     // MARK: - Dispose bag
@@ -35,7 +34,6 @@ final class AppFlowCoordinator: Q.FlowCoordinator<Q.NoDeepLink> {
 }
 
 extension AppFlowCoordinator: AppFlowDelegate {
-    
     func showDefaultFlow() {
         let defaultFlow = DefaultFlowCoordinator()
         self.addChild(defaultFlow)

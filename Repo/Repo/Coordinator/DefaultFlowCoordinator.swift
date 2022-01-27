@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol UserFlowDelegate: class {
+protocol UserFlowDelegate: AnyObject {
     func goToApp()
 }
 
-final class DefaultFlowCoordinator: Q.FlowCoordinator<Q.NoDeepLink> {
+final class DefaultFlowCoordinator: BaseCoordinator<NoDeepLink> {
     weak var flowDelegate: AppFlowDelegate?
     
     override func start(in window: UIWindow) {
