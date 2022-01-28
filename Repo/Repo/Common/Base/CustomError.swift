@@ -15,7 +15,6 @@ enum CustomError: Error {
 }
 
 extension CustomError: LocalizedError {
-    
     public var errorDescription: String? {
         switch self {
         case .noNetwork:

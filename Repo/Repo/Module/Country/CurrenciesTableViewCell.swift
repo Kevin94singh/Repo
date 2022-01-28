@@ -9,7 +9,6 @@ import UIKit
 import Stevia
 
 final class CurrenciesTableViewCell: UITableViewCell {
-    
     private lazy var nameValueLabel: UILabel = {
         let label = UILabel().style(LabelStyle.regular12Right)
         return label

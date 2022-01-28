@@ -1,7 +1,6 @@
 import UIKit
 
 protocol ViewControllerStyleable {
-    
     func setStyle()
     func setDefaultAttributesFor(style: AppStyle, for viewController: UIViewController)
     func setDefaultAttributesFor(style: AppStyle, for viewController: UIViewController, title: String?)

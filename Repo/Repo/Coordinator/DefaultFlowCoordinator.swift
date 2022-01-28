@@ -11,17 +11,30 @@ protocol UserFlowDelegate: AnyObject {
     func goToApp()
 }
 
-final class DefaultFlowCoordinator: BaseCoordinator<NoDeepLink> {
+final class CountryFlowCoordinator: BaseCoordinator<NoDeepLink> {
     weak var flowDelegate: AppFlowDelegate?
     
     override func start(in window: UIWindow) {
         super.start(in: window)
         
-        let countryVC = CountryViewController(viewModel: CountryViewModel(dependencies: dependencies))
-        let navigationController = UINavigationController(rootViewController: countryVC)
+        let viewController = CountryViewController(viewModel: CountryViewModel(dependencies: dependencies))
+        viewController.delegate = self
+        let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
         rootViewController = navigationController
         self.navigationController = navigationController
+    }
+}
+
+extension CountryFlowCoordinator: CountryViewControllerDelegate {
+    func countryViewControllerDelegateShowError() {
+        let viewController = ErrorViewController(viewModel: NoViewModel())
+        viewController.dismissTapped = { [weak self] in
+            self?.navigationController?.dismiss(animated: true, completion: nil)
+        }
+        viewController.modalTransitionStyle = .crossDissolve
+        viewController.modalPresentationStyle = .overFullScreen
+        self.navigationController?.present(viewController, animated: true, completion: nil)
     }
 }

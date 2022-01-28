@@ -8,10 +8,6 @@
 import UIKit
 import RxSwift
 
-protocol AppFlowDelegate: AnyObject {
-    func showDefaultFlow()
-}
-
 final class AppFlowCoordinator: BaseCoordinator<NoDeepLink> {
     private var window: UIWindow!
     
@@ -29,14 +25,14 @@ final class AppFlowCoordinator: BaseCoordinator<NoDeepLink> {
         window.rootViewController = vc
         rootViewController = vc
         
-        self.showDefaultFlow()
+        self.showCountryFlow()
     }
 }
 
 extension AppFlowCoordinator: AppFlowDelegate {
-    func showDefaultFlow() {
-        let defaultFlow = DefaultFlowCoordinator()
-        self.addChild(defaultFlow)
-        defaultFlow.start(in: window)
+    func showCountryFlow() {
+        let countryFlow = CountryFlowCoordinator()
+        self.addChild(countryFlow)
+        countryFlow.start(in: window)
     }
 }

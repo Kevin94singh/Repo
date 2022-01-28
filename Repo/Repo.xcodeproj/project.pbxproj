@@ -44,6 +44,8 @@
 		0AF7CE7127A302BC005D4E9E /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7CE7027A302BC005D4E9E /* UINavigationController.swift */; };
 		0AF7CE7327A30521005D4E9E /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7CE7227A30521005D4E9E /* AnimatedButton.swift */; };
 		0AF7CE7527A31F7D005D4E9E /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7CE7427A31F7D005D4E9E /* Name.swift */; };
+		0AF7CE7727A3D2A1005D4E9E /* CountryViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7CE7627A3D2A1005D4E9E /* CountryViewControllerDelegate.swift */; };
+		0AF7CE7927A3D3D4005D4E9E /* AppFlowCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7CE7827A3D3D4005D4E9E /* AppFlowCoordinatorDelegate.swift */; };
 		2F400A9D9B6BD48124C4A6C9 /* Pods_Repo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58E459F3D2952F0418D4492 /* Pods_Repo.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		0AF7CE7027A302BC005D4E9E /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		0AF7CE7227A30521005D4E9E /* AnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
 		0AF7CE7427A31F7D005D4E9E /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		0AF7CE7627A3D2A1005D4E9E /* CountryViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0AF7CE7827A3D3D4005D4E9E /* AppFlowCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		2D5F69F93F0994B4AA007784 /* Pods-Repo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repo.debug.xcconfig"; path = "Target Support Files/Pods-Repo/Pods-Repo.debug.xcconfig"; sourceTree = "<group>"; };
 		A58E459F3D2952F0418D4492 /* Pods_Repo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C068F11F71B3CCC873E99F2F /* Pods-Repo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repo.release.xcconfig"; path = "Target Support Files/Pods-Repo/Pods-Repo.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				0A06D8CF2561E0F900AF0222 /* CountryViewModel.swift */,
 				0A20B2A5256B12CA00F33E94 /* CountryTableViewCell.swift */,
 				0A20B381256C427400F33E94 /* CurrenciesTableViewCell.swift */,
+				0AF7CE7627A3D2A1005D4E9E /* CountryViewControllerDelegate.swift */,
 			);
 			path = Country;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			children = (
 				0A20B272256AE4BF00F33E94 /* AppFlowCoordinator.swift */,
 				0A20B275256AE57900F33E94 /* DefaultFlowCoordinator.swift */,
+				0AF7CE7827A3D3D4005D4E9E /* AppFlowCoordinatorDelegate.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -465,7 +471,9 @@
 				0AF7CE6B27A30186005D4E9E /* Logger.swift in Sources */,
 				0AF55AA825630231004F4041 /* CountryApiRouter.swift in Sources */,
 				0A20B38D256C47E100F33E94 /* ViewStyle.swift in Sources */,
+				0AF7CE7927A3D3D4005D4E9E /* AppFlowCoordinatorDelegate.swift in Sources */,
 				0AF7CE7127A302BC005D4E9E /* UINavigationController.swift in Sources */,
+				0AF7CE7727A3D2A1005D4E9E /* CountryViewControllerDelegate.swift in Sources */,
 				0A20B29B256AF2C800F33E94 /* CountryApiService.swift in Sources */,
 				0A20B39E256C505500F33E94 /* Currencies.swift in Sources */,
 				0A20B2A6256B12CA00F33E94 /* CountryTableViewCell.swift in Sources */,

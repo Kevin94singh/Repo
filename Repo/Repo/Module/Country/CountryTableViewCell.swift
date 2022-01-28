@@ -9,7 +9,6 @@ import UIKit
 import Stevia
 
 final class CountryTableViewCell: UITableViewCell {
-    
     private lazy var countryValueLabel: UILabel = {
         let label = UILabel().style(LabelStyle.regular12Right)
         return label

@@ -7,7 +7,6 @@
 
 struct Configuration {
     struct URL {
-        
         struct CountryApi {
             static let base = "https://restcountries.com"
         }

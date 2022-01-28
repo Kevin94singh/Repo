@@ -19,5 +19,4 @@ struct ViewStyle {
         view.layer.shadowColor = UIColor.shadowColor
         view.layer.cornerRadius = 10
     }
-    
 }

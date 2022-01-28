@@ -50,15 +50,13 @@ final class CountryViewModel: BaseViewModel, CountryViewModelInputs, CountryView
     
     // MARK: - Inputs
     
-    internal let country = BehaviorRelay<[CountryItem]>(value: [])
-    internal let error = BehaviorRelay<Error?>(value: nil)
-    internal let isExecuting = BehaviorRelay<Bool>(value: false)
+    let country = BehaviorRelay<[CountryItem]>(value: [])
+    let error = BehaviorRelay<Error?>(value: nil)
+    let isExecuting = BehaviorRelay<Bool>(value: false)
 }
 
 extension CountryViewModel {
-    
     func bindAction() {
-        
         countryAction
             .elements
             .bind(to: country)

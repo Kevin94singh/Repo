@@ -22,6 +22,8 @@ final class CountryViewController: BaseViewController<CountryViewModel> {
         return tableView
     }()
     
+    weak var delegate: CountryViewControllerDelegate?
+    
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
@@ -129,15 +131,8 @@ extension CountryViewController {
             .error
             .asDriver()
             .drive(onNext: { [weak self] (error) in
-                guard let self = self, let _ = error else { return }
-                let errorVC = ErrorViewController(viewModel: NoViewModel())
-                errorVC.dismissTapped = { [weak self] in
-                    self?.navigationController?.dismiss(animated: true, completion: nil)
-                }
-                errorVC.modalTransitionStyle = .crossDissolve
-                errorVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.present(errorVC, animated: true, completion: nil)
-                
+                guard let _ = error else { return }
+                self?.delegate?.countryViewControllerDelegateShowError()
             })
             .disposed(by: disposeBag)
     }
